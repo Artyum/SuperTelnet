@@ -49,9 +49,9 @@
 
     - Ping from a remote machine
     supertelnet -src "10.66.3.61" -srv 10.66.3.22 -ping
-    supertelnet -src "war01polaris10" -srv 10.66.3.22 -ping
+    supertelnet -src "machine" -srv 10.66.3.22 -ping
     supertelnet -src "10.66.3.61" -srv "machine" -ping
-    supertelnet -src "war01polaris10" -srv "machine" -ping
+    supertelnet -src "machine1" -srv "machine2" -ping
 
     - Telnet from the local machine
     supertelnet -srv "192.168.224.81" -port 4000
@@ -60,8 +60,8 @@
     - Telnet from a remote machine
     supertelnet -src "10.66.197.216" -srv "192.168.224.81" -port 4000
     supertelnet -src "10.66.197.216" -srv "machine" -port 4000
-    supertelnet -src "war01escptr1" -srv "192.168.224.81" -port 4000
-    supertelnet -src "war01escptr1" -srv "machine" -port 4000
+    supertelnet -src "machine" -srv "192.168.224.81" -port 4000
+    supertelnet -src "machine1" -srv "machine2" -port 4000
 
     - Telnet on a range of ports
     supertelnet -srv "192.168.224.81" -port 4000:4005
