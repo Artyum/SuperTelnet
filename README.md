@@ -1,7 +1,9 @@
-This PowerShell script is a tool for testing network connections using Telnet and ICMP pings. Below is an analysis of its functions and overall operation.
-
 ### 1. **General Overview**
-The script, named `supertelnet`, allows testing connections from a local or remote machine to a target server using the Telnet protocol (TCP) or the Ping command (ICMP). It also supports DNS name resolution and configuration of timeout settings.
+This PowerShell script is a tool for testing network connections using Telnet and ICMP pings, designed specifically for execution within a Windows domain environment.
+
+The script allows testing connections from a local or remote machine to a target server using the Telnet protocol (TCP) or the Ping command (ICMP). It also supports DNS name resolution and configuration of timeout settings, making it suitable for diagnosing network connectivity issues in a domain-based network.
+
+The script utilizes the **WinRM** (Windows Remote Management) protocol to perform remote operations. Proper configuration of WinRM is required, and the necessary ports **5985 (HTTP)** and **5986 (HTTPS)** must be open on both the local and remote machines for successful execution.
 
 ### 2. **Main Functions of the Script**
 - `supertelnet`: The main function that accepts parameters for the source (`-src`), target server (`-srv`), ports (`-port`), timeout (`-timeout`), and optional switches (`-ping`, `-dns`).
